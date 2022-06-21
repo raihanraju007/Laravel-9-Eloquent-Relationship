@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\User;
+use App\Models\Phone;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +16,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    $phone =User::find(1);
+    $phone =User::find(1)->phone;
+    return $phone;
+
+
+    $user =Phone::find(1);
+    // $phone =User::find(1)->phone;
+    return $user;
+
     return view('welcome');
 });
+
+// 13 minutes
